@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Кластеризация</title>
+    <link rel="stylesheet" type="text/css" href="clasterization.css">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <a href="../index.html" title="Вернуться на главную">
+                <div class="header__logo"></div>
+            </a>
+            <nav class="nav">
+                <a class="nav__link" href="../ant/ant.html">Муравьиный алгоритм</a>
+                <a class="nav__link" href="">Генетический алгоритм</a>
+                <a class="nav__link" href="../A-star/main.html">Алгоритм А*</a>
+                <a class="nav__link" href="../Neural/main.html">Нейронная сеть</a>
+                <a class="nav__link" href="">Дерево решений</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<container class="CanvasContainer">
+  <div style="display: grid; justify-items: center">
+        <span>Алгоритм K-means</span>
+        <canvas id="CanvasKmeans" width="400" height="400" style="background: #cccccc;"></canvas>
+  </div>
+    <div style="display: grid; justify-items: center">
+        <span>Иерархический алгоритм</span>
+        <canvas id="CanvasHierarchy" width="400" height="400" style="background: #cccccc;"></canvas>
+    </div>
+    <div style="display: grid; justify-items: center">
+        <span>Интересный иерархический алгоритм</span>
+        <canvas id="CanvasHierarchyInteresting" width="400" height="400" style="background: #cccccc;"></canvas>
+    </div>
+</container>
+
+  <div style="display: flex;justify-content: center; align-content: center; margin-top: 30px">Количество кластеров: <input type="range" min="2" max="10" id="count" value="2" onchange="document.getElementById('countValue').innerHTML = this.value;"> <span id="countValue">2</span></div>
+<div style="display: flex;
+    flex-direction: row;
+    justify-content: center;">
+    <input type="radio" id="pencil" name="circles" value="1">
+    <label for="pencil">Добавить элемент</label>
+
+    <input type="radio" id="eraser" name="circles" value="2">
+    <label for="eraser">Убрать элемент</label>
+</div>
+<container class = "buttonsContainer">
+  <button id="claster" onclick="clusterization()">Провести кластеризацию</button>
+  <button id="clearMap" onclick="clearCanvas()">Очистить</button>
+</container>
+ <script type="text/javascript" src="clasterization.js"></script>
+ <script type="text/javascript" src="Kmeans.js"></script>
+ <script type="text/javascript" src="Hierarchy.js"></script>
+ <script type="text/javascript" src="HierarchyInteresting.js"></script>
+</body>
+</html>

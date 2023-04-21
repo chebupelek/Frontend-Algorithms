@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script type="module" src="main.js"></script>
+  <script type="module" src="fifty/fiftyNeural.js"></script>
+  <script type="module" src="fifty/drawMatrixForFifty.js"></script>
+  <link rel="stylesheet" href="../src/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="../src/css/index.css">
+  <link rel="stylesheet" href="css/ant.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+  <title>Муравьиный алгоритм</title>
+</head>
+<body>
+<header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <a href="../index.html" title="Вернуться на главную">
+        <div class="header__logo"></div>
+      </a>
+      <nav class="nav">
+        <a class="nav__link" href="../Neural/main.html">Нейронная сеть</a>
+        <a class="nav__link" href="">Генетический алгоритм</a>
+        <a class="nav__link" href="../A-star/main.html">Алгоритм А*</a>
+        <a class="nav__link" href="../clasterization/clasterization.html">Кластеризация</a>
+        <a class="nav__link" href="">Дерево решений</a>
+      </nav>
+    </div>
+  </div>
+</header>
+<div class="main">
+  <div class="container" style="display: contents">
+          <div class="buttonsBlock" style="display: flex; flex-direction: column; margin-right: 70px">
+            <div>
+              <input type="radio" id="pencil" name="circles" value="1">
+              <label for="pencil">Добавить элемент</label>
+              <input type="radio" id="eraser" name="circles" value="2">
+              <label for="eraser">Убрать элемент</label>
+            </div>
+            <div style="font-size: 30px">
+            <div>Скорость анимации: <input type="range" min="1" max="1000" id="time" value="1000" onchange="document.getElementById('timeValue').innerHTML = this.value;"> <span id="timeValue">1000</span></div>
+            <div>Количество итераций: <input type="range" min="100" max="10000" id="iter" value="1000" onchange="document.getElementById('iterValue').innerHTML = this.value;"> <span id="iterValue">1000</span></div>
+            <div>Влияние расстояния: <input type="range" min="0.1" max="10" step="0.1" id="dist" value="4" onchange="document.getElementById('distValue').innerHTML = this.value;"> <span id="distValue">4</span></div>
+            <div>Влияние феромонов: <input type="range" min="0.1" max="10" step="0.1" id="pher" value="1" onchange="document.getElementById('pherValue').innerHTML = this.value;"> <span id="pherValue">1</span></div>
+            <div>Увеличение феромонов: <input type="range" min="1" max="10" step="1" id="plus" value="4" onchange="document.getElementById('plusValue').innerHTML = this.value;"> <span id="plusValue">4</span></div>
+            <div>Уменьшение феромонов: <input type="range" min="1" max="100" step="1" id="minus" value="90" onchange="document.getElementById('minusValue').innerHTML = this.value;"> <span id="minusValue">90</span> %</div>
+            </div>
+            <div style="display: flex; justify-content: space-evenly;">
+            <button id="graf" onclick="graf()">Построить путь</button>
+            <button id="clearMap" onclick="clearCanvas()">Очистить</button>
+            </div>
+          </div>
+          <div class="table">
+          <canvas id="Canvas" width="550" height="550" style="background: #ffffff;"></canvas>
+          </div>
+          <script type="text/javascript" src="graph.js"></script>
+          <script type="text/javascript" src="ant.js"></script>
+    </div>
+  </div>
+</div>
+</body>
+</html>

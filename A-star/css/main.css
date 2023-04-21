@@ -1,0 +1,66 @@
+body {
+    font-family: googleSans,serif;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.range {
+    margin-left: 30px;
+    display: block;
+    width: 350px;
+}
+
+table {
+
+    height: 80%;
+    width: 50%;
+    margin: 50px;
+    padding: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+    background: white;
+}
+.start
+{
+    background-color: rgb(0, 255, 34);
+}
+.finish
+{
+    background-color: rgb(255, 0, 0);
+}
+.checkFirst
+{
+    background-color: rgb(110, 190, 255);
+}
+.checkSecond
+{
+    background-color: rgb(0, 140, 255);
+}
+.road
+{
+    background-color: rgb(255, 251, 0);
+}
+.wall
+{
+    background-color: rgb(100, 100, 100);
+}
+button
+{
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: googlesans, sans-serif;
+}
+td
+{
+    border: 1px solid black;
+}
+.inputs{
+    display: grid;
+}
+
+
+

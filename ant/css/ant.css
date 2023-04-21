@@ -1,0 +1,8 @@
+button{
+    cursor: pointer;
+    font-family: Rubic, sans-serif;
+    margin: 14px;
+    height: 60px;
+    width: 230px;
+    font-size: 20px;
+    border-radius: 10px;}

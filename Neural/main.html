@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="module" src="main.js"></script>
+    <script type="module" src="fifty/fiftyNeural.js"></script>
+    <script type="module" src="fifty/drawMatrixForFifty.js"></script>
+    <link rel="stylesheet" href="../src/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="../src/css/index.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <title>Нейронная сеть</title>
+
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <a href="../index.html" title="Вернуться на главную">
+                <div class="header__logo"></div>
+            </a>
+            <nav class="nav">
+                <a class="nav__link" href="../ant/ant.html">Муравьиный алгоритм</a>
+                <a class="nav__link" href="">Генетический алгоритм</a>
+                <a class="nav__link" href="../A-star/main.html">Алгоритм А*</a>
+                <a class="nav__link" href="../clasterization/clasterization.html">Кластеризация</a>
+                <a class="nav__link" href="">Дерево решений</a>
+            </nav>
+        </div>
+    </div>
+</header>
+<div class="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-12">
+                <div class="container-settings">
+                    <div class="buttonsBlock">
+                        <button id="clearButton" class="buttons">Очистить</button>
+                        <button id="startButton" class="buttons">Старт</button>
+                        <button id="fiftyButton" class="buttons">50x50</button>
+                    </div>
+                    <div class="invisibleBlock">
+                        <button id="trainButton" class="invisibleButtons" id="invisibleButton1" disabled>Train</button>
+                        <button id="nextButton" class="invisibleButtons" id="invisibleButton2" disabled>Next</button>
+                        <p id="updateNumber" class="neuronNumber" style="margin-left: 225px; margin-top:50px;">Ваше число  </p>
+                        <br>
+                        <p id="trainNumber"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="table-container">
+                    <table class="table-matrix">
+                        <tbody id="matrix"></tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

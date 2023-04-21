@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Алгоритм А*</title>
+    <link rel="stylesheet" href="../src/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="../src/css/index.css">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <a href="../index.html" title="Вернуться на главную">
+                <div class="header__logo"></div>
+            </a>
+            <nav class="nav">
+                <a class="nav__link" href="../ant/ant.html">Муравьиный алгоритм</a>
+                <a class="nav__link" href="">Генетический алгоритм</a>
+                <a class="nav__link" href="../clasterization/clasterization.html">Кластеризация</a>
+                <a class="nav__link" href="../Neural/main.html">Нейронная сеть</a>
+                <a class="nav__link" href="">Дерево решений</a>
+            </nav>
+        </div>
+    </div>
+</header>
+<div class="main">
+    <div class="inputs">
+    <div style="display: flex; font-family: googleSans,sans-serif">Размер карты: <input type="range" min="2" max="100" id="size" value="2" onchange="document.getElementById('rangeValue').innerHTML = this.value;"> <span id="rangeValue">2</span></div>
+    <div style="display: flex; font-family: googleSans,sans-serif">Скорость анимации: <input type="range" min="10" max="100" id="time" value="1" onchange="document.getElementById('timeValue').innerHTML = this.value;"> <span id="timeValue">1</span> </div>
+
+    <button id="ButtonCreate" onclick="generateMap()">Отобразить карту</button>
+    <button id="ButtonPath" onclick="findPath()">Показать путь</button>
+    <button id="ButtonCreateMaze" onclick="generateMaze()">Построить лабиринт</button>
+    <p></p>
+    </div>
+    <table id="table"></table>
+    <p></p>
+    <script type="text/javascript" src="astar.js"></script>
+</div>
+</div>
+
+</body>
+</html>

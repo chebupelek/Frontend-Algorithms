@@ -1,0 +1,132 @@
+body {
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+    margin: 0;
+    background: linear-gradient(to top right,#134E5E 13.02%,#71B280 100%) fixed;
+    background-size: cover;
+    height: 100%;
+    line-height: 1.6;
+    font-family: Rubic, sans-serif;
+}
+
+button
+{
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: googlesans, sans-serif;
+}
+.header {
+    padding-bottom: 30px;
+    display: flex;
+    width: 100%;
+    /* padding: 10px; */
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-family: Rubic, sans-serif;
+    text-transform: uppercase;
+}
+.header__inner {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    /*padding: 10px;*/
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.nav {
+    font-size: 20px;
+    font-family: Rubic, sans-serif;
+    text-transform: uppercase;
+}
+.nav__link {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 10px;
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+
+    transition: color 0.2s linear;
+}
+.nav__link:hover {
+    color: #fce38e;
+}
+.nav__link:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fce38e;
+    position: absolute;
+    /*display: none;*/
+    opacity: 0;
+    transition: opacity 0.2s linear;
+}
+.nav__link:hover:after {
+    display: block;
+    color: #fce38e;
+    opacity: 1;
+}
+.CanvasContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 3%;
+}
+.claster{
+    width: 25%;
+}
+.buttonsContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.start
+{
+    background-color: rgb(0, 255, 34);
+}
+.finish
+{
+    background-color: rgb(255, 0, 0);
+}
+.checkFirst
+{
+    background-color: rgb(110, 190, 255);
+}
+.checkSecond
+{
+    background-color: rgb(0, 140, 255);
+}
+.road
+{
+    background-color: rgb(255, 251, 0);
+}
+.wall
+{
+    background-color: rgb(100, 100, 100);
+}
+button
+{
+    padding: 5px;
+}
+table
+{
+    table-layout: auto;
+    height: 500px;
+    width: 500px;
+    border-collapse: collapse;
+}
+input[type='range'] {
+    overflow: hidden;
+    width: 300px;
+    background-color: #ffffff;
+}
+td
+{
+    border: 1px solid black;
+}
