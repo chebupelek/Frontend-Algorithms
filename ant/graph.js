@@ -25,7 +25,9 @@ Canvas.addEventListener("click", function(event){
       {
         circlesX.splice(index, 1);
         circlesY.splice(index, 1);
-        changeColor();
+        ctx.clearRect(0, 0, Canvas.width, Canvas.height);
+        drawAllPoints();
+        break;
       }
     }
   }
